@@ -1,0 +1,16 @@
+<%= error_messages_for 'folder' %>
+<div class="box">
+<!--[form:folder]-->
+<p><label for="folder_title"><%=l(:field_title)%> <span class="required">*</span></label>
+<%= text_field 'folder', 'title', :size => 60 %></p>
+<% unless @folder.root? %>
+  <p><label for="parent_folder"><%=l(:field_parent_folder)%></label>
+    <%= select('folder', 'parent_folder_id', nested_set_options(@current_folder.root, @folder) {|f| "#{'-' * f.level} #{f.title} "}) %>
+  </p>
+<% end %>
+<p><label for="folder_description"><%=l(:field_description)%></label>
+<%= text_area 'folder', 'description', :cols => 60, :rows => 15, :class => 'wiki-edit' %></p>
+<!--[eoform:folder]-->
+</div>
+
+<%= wikitoolbar_for 'folder_description' %>

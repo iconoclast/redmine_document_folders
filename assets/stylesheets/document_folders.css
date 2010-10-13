@@ -1,0 +1,36 @@
+
+ /* Document display */
+ .document_group {
+    /*padding-top: 16px;*/
+    /*margin-bottom: 2px;*/
+    /* 
+       this used to occur in an h3 before we made the document_group collapsable
+       so now we need to recreate the way the h3 would've looked, merged with the
+       two attributes above.
+    */
+    padding: 16px 10px 1px 0px;
+    margin: 0 0 2px 0; 
+    border-bottom: 0px; 
+    color:#606060; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px;
+}
+
+.document_item {
+    padding-top: 2px;
+    padding-bottom: 6px;
+    padding-right: 8px;
+    margin-left: 12px;
+}
+
+.document_item:hover {
+    background-color: #FFFFDD;
+}
+
+.document_item .document_description {
+    padding-left: 2em;
+}
+
+.icon-document { background-image: url(../../../images/document.png); }
+.icon-open-folder { background-image: url(../../../images/folder_open.png); }
+.icon-add-folder { background-image: url(../../../images/folder_open_add.png); }

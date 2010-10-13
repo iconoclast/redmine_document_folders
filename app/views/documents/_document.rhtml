@@ -1,0 +1,19 @@
+<div class="document_item"> 
+  <div class="contextual">
+    <%= link_to_if_authorized l(:button_edit), {:controller => 'documents', :action => 'edit', :id => document}, :class => 'icon icon-edit', :accesskey => accesskey(:edit) %>
+    <%= link_to_if_authorized l(:button_delete), {:controller => 'documents', :action => 'destroy', :id => document}, :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del' %>
+  </div>
+  <%= link_to h(document.title), {:controller => 'documents', :action => 'show', :id => document}, {:class => "document_title icon icon-document"} %>
+  last modified: <em><%= format_time(document.updated_on) %></em>
+(
+  <%if document.attachments.last %>
+    <%= link_to_attachment document.attachments.last, {:text => "latest"} -%>
+    |
+  <% end %>
+  <%= link_to "all revisions", {:controller => 'documents', :action => 'show', :id => document, :anchor => "revisions"}, {:class => "document_title"} %> )
+  <% unless document.description.blank? %>
+    <div class="document_description">
+      <%=h(truncate(document.description, :length => 250)) %>
+    </div>
+  <% end %>
+</div>

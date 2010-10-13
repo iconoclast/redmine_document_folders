@@ -1,3 +1,9 @@
 # English strings go here for Rails i18n
 en:
-  my_label: "My label"
+  field_folder: Folder
+  field_parent_folder: Parent folder
+  label_folder: Folder
+  label_folder_new: New folder
+  label_folder_plural: Folders
+  label_folder_added: Folder added
+ 

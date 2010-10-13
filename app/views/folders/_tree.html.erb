@@ -1,0 +1,22 @@
+<% content_for :header_tags do %>
+  <%= javascript_include_tag "jquery.treeview.min.js", :plugin => :redmine_document_folders %>
+  <script type="text/javascript">
+jQuery.noConflict();
+
+jQuery(document).ready(function(){
+  jQuery("#folder_tree").treeview({
+
+  });
+});
+  </script>
+  <%= stylesheet_link_tag 'jquery.treeview.css', :plugin => :redmine_document_folders %>
+  <%= stylesheet_link_tag 'document_folders.css', :plugin => :redmine_document_folders %>
+<% end %>
+
+<br />
+<div class="folder_list">
+  <h3><%=l(:label_document)%> <%=l(:label_folder_plural)%></h3>
+  <ul id="folder_tree" class="filetree">
+    <%= tree_list_tags(@current_folder.root) %>
+  </ul> <!-- folder_tree -->
+</div <!-- folder_list -->

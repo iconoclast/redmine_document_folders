@@ -1,0 +1,18 @@
+<h1>Listing folders</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @folders.each do |folder| %>
+  <tr>
+    <td><%= link_to 'Show', folder %></td>
+    <td><%= link_to 'Edit', edit_folder_path(folder) %></td>
+    <td><%= link_to 'Destroy', folder, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New folder', new_folder_path %>

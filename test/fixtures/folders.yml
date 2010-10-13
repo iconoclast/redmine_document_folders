@@ -1,0 +1,36 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+folders_001:
+  title: MyFolder
+  description: My Folder Description
+  id: 1
+  project_id: 1
+  lft: 1
+  rgt: 6
+
+folders_002:
+  title: Test folder number two
+  description: Description of test folder number two
+  id: 2
+  project_id: 1
+  parent_id: 1
+  lft: 2
+  rgt: 5
+
+folders_003:
+  title: Test folder number three
+  description: Yet another test folder
+  id: 3
+  project_id: 1
+  parent_id: 1
+  lft: 6
+  rgt: 7
+
+folders_004:
+  title: Test folder number four
+  description: Child folder below folder two
+  id: 4
+  project_id: 1
+  parent_id: 2
+  lft: 3
+  rgt: 4
