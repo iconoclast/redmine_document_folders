@@ -31,6 +31,42 @@
     padding-left: 2em;
 }
 
+/*
+ * Document folders.
+ */
+
+#folder_tree a {
+    padding-left: 3px;
+}
+#folder_tree a.icon {
+    padding-left: 20px;
+}
+#folder_tree .current a {
+    font-weight: bold;
+    /*font-size: 1.2em;*/
+    padding-left: 3px;
+}
+
+#folder_breadcrumbs {
+    padding-left: 2em;
+    font-size: 1.2em;
+    margin-top: -12px;
+}
+.folder_description {
+    padding-left: 1em;
+}
+
+.attachment {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.attachment:hover {
+    background-color: #FFFFDD;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 .icon-document { background-image: url(../../../images/document.png); }
 .icon-open-folder { background-image: url(../../../images/folder_open.png); }
 .icon-add-folder { background-image: url(../../../images/folder_open_add.png); }

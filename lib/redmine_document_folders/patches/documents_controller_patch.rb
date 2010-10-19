@@ -9,7 +9,7 @@ module RedmineDocumentFolders
         base.send(:include, InstanceMethods)
         base.class_eval do
           unloadable          
-          before_filter :find_folder, :only => [:index, :new, :show]
+          before_filter :find_folder, :only => [:index, :new, :show, :edit]
           helper :folders
 
           alias_method_chain :index, :folder_filter
