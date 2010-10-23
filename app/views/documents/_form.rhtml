@@ -5,7 +5,7 @@
 <%= select('document', 'category_id', DocumentCategory.all.collect {|c| [c.name, c.id]}) %></p>
 
 <p><label for="folder_id"><%=l(:field_folder)%></label>
-<%= select('document', 'folder_id', nested_set_options(@document.folder.root) {|f| "#{'-' * f.level} #{f.title} "}) %></p>
+<%= select('document', 'folder_id', nested_set_options(@document.folder.try(:root)) {|f| "#{'-' * f.level} #{f.title} "}) %></p>
 
 <p><label for="document_title"><%=l(:field_title)%> <span class="required">*</span></label>
 <%= text_field 'document', 'title', :size => 60 %></p>
