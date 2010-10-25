@@ -1,3 +1,15 @@
-= document_folders
+= Redmine Document Folders
 
-Description goes here
+Organize your Redmine project's documents with a hierarchy of folders.  
+Also includes various document view tweaks, such as one-click download of a document's most recent revision directly from the document index page.
+
+== Installation
+
+  - Standard Redmine plugin installation: http://www.redmine.org/wiki/redmine/Plugins
+
+    Download jquery into your javascripts directory if you don't already have it for some reason. (Tested with v1.4.2)
+    If you are already using jquery elsewhere in your site you'll probably need to adjust the invocation at the top of redmine_document_folders/app/views/folders/_tree.html.erb
+
+== Acknowledgements
+
+Includes code from the jquery treeview plugin: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/
