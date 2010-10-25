@@ -12,8 +12,8 @@
   <% end %>
   <%= link_to "all revisions", {:controller => 'documents', :action => 'show', :id => document, :anchor => "revisions"}, {:class => "document_title"} %> )
   <% unless document.description.blank? %>
-    <div class="document_description">
-      <%=h(truncate(document.description, :length => 250)) %>
+    <div class="document_description wiki">
+      <%= textilizable(truncate_lines(document.description)) %>
     </div>
   <% end %>
 </div>
