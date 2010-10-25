@@ -1,7 +1,6 @@
 module RedmineDocumentFolders
   module Patches
 
-
     module ProjectPatch
 
       def self.included(base)
@@ -11,6 +10,8 @@ module RedmineDocumentFolders
           unloadable
           has_many :folders, :dependent => :destroy
         end
+
+        super
       end
 
       module ClassMethods

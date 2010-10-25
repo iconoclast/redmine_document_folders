@@ -9,6 +9,8 @@ module RedmineDocumentFolders
           unloadable
           belongs_to :folder
         end
+
+        super
       end
 
       module ClassMethods
