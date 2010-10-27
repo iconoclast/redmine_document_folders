@@ -7,9 +7,6 @@ Also includes various document view tweaks, such as one-click download of a docu
 
   - Standard Redmine plugin installation: http://www.redmine.org/wiki/redmine/Plugins
 
-  - Download jquery into your javascripts directory if you don't already have it for some reason. 
-    (Tested with v1.4.2)
-
   - If you are already using jquery elsewhere in your site you'll probably need to adjust the 
     invocation at the top of redmine_document_folders/app/views/folders/_tree.html.erb
 

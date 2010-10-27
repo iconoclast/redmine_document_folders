@@ -1,12 +1,12 @@
 <% content_for :header_tags do %>
-  <%= javascript_include_tag "jquery" %>
-  <%= javascript_include_tag "jquery.treeview.min.js", :plugin => :redmine_document_folders %>
+  <%= javascript_include_tag "jquery", :plugin => :redmine_document_folders %>
+  <%= javascript_include_tag "jquery.treeview.js", :plugin => :redmine_document_folders %>
   <script type="text/javascript">
 jQuery.noConflict();
 
 jQuery(document).ready(function(){
   jQuery("#folder_tree").treeview({
-
+    persist: "location"
   });
 });
   </script>
