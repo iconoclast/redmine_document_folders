@@ -1,7 +1,7 @@
 <div class="attachments">
 <% for attachment in attachments %>
 <div class="attachment">
-  <div class="contextual"
+  <div class="contextual">
     <%= link_to l(:button_delete), {:controller => 'attachments', :action => 'destroy', :id => attachment},
                                          :confirm => l(:text_are_you_sure),
                                          :method => :post,
